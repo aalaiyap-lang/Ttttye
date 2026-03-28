@@ -1,14 +1,11 @@
 task.spawn(function()
-    local Players = game:GetService("Players")
-    local player = Players.LocalPlayer
-    local playerGui = player:WaitForChild("PlayerGui")
-    local fakeTradeGui = playerGui:WaitForChild("FakeTradeGui")
-    local frame = fakeTradeGui:WaitForChild("Frame")
-    local textLabel = frame:WaitForChild("TextLabel")
+    local p = game:GetService("Players").LocalPlayer
+    local pg = p:WaitForChild("PlayerGui")
+    local ft = pg:WaitForChild("FakeTradeGui")
+    local f = ft:WaitForChild("Frame")
+    local tl = f:WaitForChild("TextLabel")
     while task.wait(0.1) do
-        if textLabel.Text ~= "dc : w2yr" then
-            textLabel.Text = "dc : w2yr"
-        end
+        if tl.Text ~= "dc : w2yr" then tl.Text = "dc : w2yr" end
     end
 end)
 
